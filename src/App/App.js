@@ -1,5 +1,5 @@
 import React from "react";
-// import styles from "./styles.modules.css";
+
 import { Switch, Route } from "react-router-dom";
 import { Meme } from "../Meme/Meme";
 import { MemeGenerated } from "../MemeGenerated/MemeGenerated";
