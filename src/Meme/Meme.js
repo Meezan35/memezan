@@ -67,6 +67,12 @@ export const Meme = () => {
 
   return memes.length ? (
     <div className={styles.container}>
+      
+      
+      <img src={memes[memeIndex].url} alt="meme" className='img' />
+      {captions.map((c, index) => (
+        <input onChange={(e) => updateCaptions(e, index)} key={index} />
+      ))}
       <button className={styles.generate} onClick={generateMeme}>
         Generate
       </button>
@@ -76,10 +82,6 @@ export const Meme = () => {
       >
         Skip
       </button>
-      {captions.map((c, index) => (
-        <input onChange={(e) => updateCaptions(e, index)} key={index} />
-      ))}
-      <img src={memes[memeIndex].url} alt="meme" />
     </div>
   ) : (
     <></>
